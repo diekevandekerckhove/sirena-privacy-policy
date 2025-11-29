@@ -1,65 +1,70 @@
 Privacybeleid voor Sirena
-Laatst bijgewerkt: 20 augustus 2025
+Laatst bijgewerkt: 29 november 2025
 
 1. Introductie
-
 Welkom bij Sirena. Dit privacybeleid beschrijft hoe uw gegevens worden verwerkt wanneer u gebruikmaakt van de mobiele applicatie Sirena (hierna "de App"), ontwikkeld door Dieke Vandekerckhove (hierna "wij", "ons" of "onze").
 
-Wij hechten het grootste belang aan uw privacy. Dit beleid legt uit welke gegevens worden gebruikt en, nog belangrijker, welke gegevens niet van uw toestel worden verzonden.
+Wij hechten het grootste belang aan uw privacy. Dit beleid legt uit welke gegevens strikt lokaal blijven en welke technische gegevens noodzakelijk zijn voor de werking van de app.
 
 2. Welke gegevens verwerken wij en waarom?
+A. Inhoudelijke Gegevens (Blijven Lokaal)
+De inhoud van uw alarmen en meldingen wordt nooit door ons verzameld of gedeeld.
 
-Sirena is ontworpen om primair op uw apparaat te functioneren. Wij verzamelen of delen geen persoonlijke gegevens op onze servers. Alle verwerking en opslag van gevoelige data gebeurt uitsluitend lokaal op uw toestel.
+Notificaties van Alarmeringsapps: De App luistert naar notificaties van specifieke alarmeringsapps (zoals be.verdi.android en be.frontforce.emergency.mobile) om betrouwbare alarmering te garanderen.
 
-SMS-berichten en Notificaties (Gevoelige Data):
+Lokale Opslag: De inhoud van een verwerkt alarm wordt uitsluitend lokaal op uw toestel opgeslagen in een geschiedenislijst. Deze data verlaat uw toestel niet.
 
-Doel: De App verwerkt inkomende SMS-berichten en notificaties van een specifieke alarmeringsapp om betrouwbare alarmering voor hulpverleners te garanderen.
+Adresgegevens: Adressen worden enkel geparsed om een "Navigeer"-knop te tonen die opent in uw eigen navigatie-app. Wij slaan deze locaties niet op onze servers op.
 
-Verwerking en Filtering: De App filtert alle inkomende data onmiddellijk. Enkel SMS-berichten van een vaste, vooraf gedefinieerde lijst van telefoonnummers en enkel notificaties van een specifieke, vooraf gedefinieerde app (be.verdi.android) worden verwerkt. Alle andere data wordt direct genegeerd.
+B. Technische Gegevens (Worden Verzameld)
+Om de app correct te laten functioneren, fouten op te sporen en notificaties te sturen, verzamelt en verwerkt de App bepaalde technische gegevens.
 
-Lokale Opslag: De inhoud van een succesvol verwerkt alarm wordt lokaal op uw toestel opgeslagen in een geschiedenislijst. Deze geschiedenis is enkel zichtbaar voor u binnen de App en dient als logboek.
+1. Apparaat-ID's en Identificatiemiddelen
 
-Adresgegevens uit alarmen:
+Wat: De App verzamelt unieke identificatiemiddelen, zoals de Android ID en het Firebase Installation ID (FCM Token).
 
-Doel: De App kan een adres uit een alarmbericht parsen om een "Navigeer"-knop te tonen. Wanneer u hierop drukt, wordt het adres doorgegeven aan een door u gekozen navigatie-app.
+Waarom (Doel):
 
-Beleid: Het adres wordt niet afzonderlijk opgeslagen door Sirena.
+App-functionaliteit: Dit is noodzakelijk om push-notificaties (zoals updates of tips) naar uw specifieke toestel te kunnen sturen.
 
-Internetverbinding (Niet-Persoonlijke Data):
+Beveiliging en Fraudepreventie: Om misbruik te voorkomen en unieke installaties te verifiëren.
 
-Doel: De App gebruikt een internetverbinding (android.permission.INTERNET) voor één specifiek doel: het periodiek downloaden en bijwerken van niet-persoonlijke configuratiebestanden.
+2. Diagnostische Gegevens en Logboeken
 
-Verwerking: Deze bestanden bevatten lijsten met afkortingen (bv. van voertuigen en functies) om de Text-to-Speech-functie te verbeteren.
+Wat: De App kan technische logboeken verzenden. Dit omvat informatie over het toesteltype (bv. Build.MODEL), de Android-versie, de versie van de App, en details over eventuele crashes of fouten (Stack traces).
 
-Beleid: De internetverbinding wordt NOOIT gebruikt om persoonlijke of gevoelige gegevens (zoals SMS-inhoud, notificaties, of uw geschiedenis) van uw toestel te uploaden of te delen. De communicatie is uitsluitend eenrichtingsverkeer: van onze server naar uw app.
+Waarom (Doel):
 
-3. Gegevensbeveiliging en Back-up
+Analytics en Onderhoud: Wij gebruiken deze gegevens via onze DebugLogger en Google Firebase om de stabiliteit van de app te monitoren en bugs snel op te lossen. Dit helpt ons te begrijpen waarom de app op bepaalde toestellen mogelijk niet goed functioneert.
 
-Wij nemen de beveiliging van uw lokaal opgeslagen gegevens serieus. De App is bewust geconfigureerd met de instelling android:allowBackup="false". Dit betekent dat u de Android-systeemfunctie hebt opgedragen om de gegevens van de app, inclusief uw alarmgeschiedenis, uit te sluiten van de automatische cloudback-up naar Google Drive. Dit is een extra maatregel om te garanderen dat uw gevoelige data uw toestel niet verlaat.
+3. Gebruik van Diensten van Derden
+De App maakt gebruik van diensten van derden die gegevens kunnen verzamelen die gebruikt worden om u te identificeren. De diensten die wij gebruiken zijn:
 
-4. Delen van Gegevens
+Google Firebase (Cloud Messaging & Firestore): Voor het verzenden van notificaties en het opslaan van onbekende termen om de parser te verbeteren.
 
-Wij delen geen enkele persoonlijke of gevoelige informatie met derden. Alle verwerking en opslag van deze data gebeurt en blijft op uw toestel.
+Google Apps Script: Voor het ontvangen van geautomatiseerde foutrapporten (logs).
+
+4. Gegevensbeveiliging
+Wij nemen de beveiliging van uw gegevens serieus.
+
+Versleuteling: Alle technische gegevens die van uw toestel naar onze servers (of die van Google) worden verzonden, worden verstuurd via een beveiligde verbinding (HTTPS/SSL).
+
+Lokale Back-up: De App is geconfigureerd om gevoelige lokale data uit te sluiten van automatische Android back-ups, om te voorkomen dat alarm-inhoud onbedoeld in de cloud belandt.
 
 5. Gevoelige Permissies
+Sirena vraagt om specifieke permissies die essentieel zijn voor de kernfunctionaliteit:
 
-Sirena vraagt om de volgende gevoelige permissies, die essentieel zijn voor de werking:
+android.permission.BIND_NOTIFICATION_LISTENER_SERVICE: Noodzakelijk om inkomende alarmen van de ondersteunde bron-apps te detecteren.
 
-android.permission.READ_SMS & android.permission.RECEIVE_SMS: Noodzakelijk voor de betrouwbare, offline SMS-alarmeringsfunctie.
+android.permission.POST_NOTIFICATIONS: Noodzakelijk om de Sirena-alarmen en statusmeldingen aan u te tonen.
 
-android.permission.BIND_NOTIFICATION_LISTENER_SERVICE: Noodzakelijk om oproepen via notificaties van de specifieke alarmeringsapp te kunnen detecteren.
-
-android.permission.FOREGROUND_SERVICE & android.permission.POST_NOTIFICATIONS: Noodzakelijk om betrouwbare alarmen te tonen en af te spelen, zelfs als de app op de achtergrond is.
+android.permission.FOREGROUND_SERVICE: Noodzakelijk om te garanderen dat het alarm betrouwbaar afgaat, zelfs als u de app niet actief gebruikt.
 
 6. Privacy van Kinderen
-
-Sirena is een professionele tool bedoeld voor volwassenen en is niet gericht op personen jonger dan 18 jaar.
+Sirena is een professionele tool bedoeld voor hulpverleners en volwassenen. De app is niet gericht op personen jonger dan 18 jaar.
 
 7. Wijzigingen in dit Privacybeleid
-
-Wij kunnen dit privacybeleid van tijd tot tijd bijwerken. Wijzigingen worden van kracht zodra ze op deze pagina worden gepubliceerd.
+Wij kunnen dit privacybeleid van tijd tot tijd bijwerken. Wijzigingen worden van kracht zodra ze op deze pagina worden gepubliceerd. Wij raden u aan deze pagina regelmatig te raadplegen.
 
 8. Contact
-
-Als u vragen heeft over dit privacybeleid, kunt u contact met ons opnemen via:
-dieke.vandekerckhove@gmail.com
+Als u vragen heeft over dit privacybeleid of de gegevens die wij verzamelen, kunt u contact met ons opnemen via: dieke.vandekerckhove@gmail.com
